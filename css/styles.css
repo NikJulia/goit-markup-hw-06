@@ -441,7 +441,8 @@ img {
 }
 
 /* Footer - Social links */
-.footer-links .title {
+.footer-links .title,
+.subscript .title {
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -453,7 +454,7 @@ img {
 
 .footer-links {
   margin-left: 0;
-  margin-right: 0;
+  margin-right: 93px;
 }
 
 .footer-links .links-list {
@@ -500,9 +501,54 @@ img {
   fill: currentColor;
 }
 
+.subscript-input {
+  display: inline-flex;
+}
+
+.subscript-field {
+  margin-right: 12px;
+}
+
+.subscript-field input {
+  width: 358px;
+  height: 50px;
+  padding: 14px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscript-field input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscript-input .subscript-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 29px;
+}
+
+.subscript-btn .icon-send {
+  display: inline-block;
+  margin-left: 10px;
+  fill: currentColor;
+}
+
 /* Постоянные клиенты */
 .clients-list {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .clients-list .item {
@@ -765,4 +811,134 @@ img {
 .icon-cross {
   width: 18px;
   height: 18px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-btn:hover .icon-cross,
+.close-btn:focus .icon-cross {
+  fill: var(--secondary-btn-color);
+}
+
+/* Форма */
+.form {
+  padding: 40px;
+}
+
+.form-title {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+
+.form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-field input,
+.form-field textarea {
+  margin-bottom: 10px;
+  padding: 11px 15px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  font-size: 12px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field input {
+  padding-left: 40px;
+}
+
+.form-field > .form-label {
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+}
+
+.form-field textarea::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-btn {
+  text-align: center;
+}
+
+.submit-btn {
+  padding: 10px 55px;
+}
+
+.form-field .icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-30%);
+  fill: var(--primary-btn-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field:focus-within > .icon {
+  fill: var(--secondary-btn-color);
+}
+
+.form-field:focus-within > input,
+.form-field:focus-within > textarea {
+  outline: none;
+  border: 1px solid var(--secondary-btn-color);
+}
+
+.checkbox-field {
+  margin-bottom: 30px;
+}
+
+.checkbox-field > .checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+
+.checkbox + .checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  border: 2px solid var(--title-text-color);
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked + .checkbox-icon {
+  border-color: var(--secondary-btn-color);
+  background-color: var(--secondary-btn-color);
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.checkbox-link {
+  text-decoration: none;
+  border-bottom: 1px solid var(--secondary-btn-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--secondary-btn-color);
 }
