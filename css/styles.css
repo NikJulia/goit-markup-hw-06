@@ -134,6 +134,10 @@ img {
   color: var(--secondary-btn-color);
 }
 
+.site-nav .link.current {
+  color: var(--secondary-btn-color);
+}
+
 .site-nav .link.current::after {
   display: inline-block;
   position: absolute;
