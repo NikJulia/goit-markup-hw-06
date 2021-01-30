@@ -854,6 +854,12 @@ img {
 
 .form-field input {
   padding-left: 40px;
+  height: 48px;
+}
+
+.form-field textarea {
+  height: 120px;
+  resize: none;
 }
 
 .form-field > .form-label {
