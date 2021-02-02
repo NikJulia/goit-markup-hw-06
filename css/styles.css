@@ -786,8 +786,8 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 528px;
-  min-height: 581px;
+  width: 528px;
+  height: 581px;
   background-color: var(--secondary-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -830,6 +830,8 @@ img {
 
 .form-title {
   display: inline-block;
+  width: 448px;
+  height: 23px;
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
@@ -837,6 +839,17 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+}
+
+.form-field > .form-label {
+  display: inline-block;
+  height: 14px;
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
 }
 
 .form-field {
@@ -848,7 +861,6 @@ img {
 
 .form-field input,
 .form-field textarea {
-  margin-bottom: 10px;
   padding: 11px 15px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -858,21 +870,16 @@ img {
 
 .form-field input {
   padding-left: 40px;
-  height: 48px;
+  height: 40px;
+}
+
+.form-field.comments {
+  margin-bottom: 20px;
 }
 
 .form-field textarea {
   height: 120px;
   resize: none;
-}
-
-.form-field > .form-label {
-  margin-bottom: 4px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.01em;
-  color: var(--primary-text-color);
 }
 
 .form-field textarea::placeholder {
@@ -888,6 +895,8 @@ img {
 }
 
 .submit-btn {
+  width: 200px;
+  height: 50px;
   padding: 10px 55px;
 }
 
@@ -895,7 +904,6 @@ img {
   position: absolute;
   top: 50%;
   left: 12px;
-  transform: translateY(-30%);
   fill: var(--primary-btn-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
